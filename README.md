@@ -6,3 +6,26 @@ We are concerned about valid moves. If you are playing White, a valid move is th
 othello(board, turn, row, col) is the function 
          
 that consumes a board of type Board , turn which is one of 'B' or 'W' and two parameters row and col, natural numbers between 0 and 7 inclusive, which represents the square location in the Board where we are trying to put a piece and returns True if the piece of colour turn can be played at the given location as a valid move and False otherwise. Assume the locations start with (0, 0) as the top left and increasing down and to the right to the bottom right corner at location (7, 7).
+
+Sample:
+
+board = [[ '',  '',  '',  '',  '',  '',  '',  ''],
+         [ '',  '',  '',  '',  '',  '',  '',  ''],
+         [ '',  '', 'B', 'B', 'B',  '',  '',  ''],
+         [ '', 'W', 'B', 'W', 'W',  '', 'B',  ''],
+         [ '', 'W', 'B', 'W', 'W', 'W', 'W',  ''],
+         [ '',  '', 'W', 'W', 'W',  '',  '',  ''],
+         [ '',  '',  '', 'W',  '',  '',  '',  ''],
+         [ '',  '',  '',  '',  '',  '',  '',  '']]
+othello(board, 'B', 3, 0) => True
+othello(board, 'W', 3, 0) => False
+
+board2 = [[ 'B', 'B', 'W', 'W', 'W', 'B', 'B', 'W'],
+          [ 'B', 'B', 'B', 'W', 'B', 'W', 'W', 'W'],
+          [ 'B', 'B', 'W', 'W', 'B', 'B', 'B', 'B'],
+          [ 'B', 'W', 'W', 'W', 'W', 'W', 'W', 'W'],
+          [ 'W', 'W', 'W', 'W', 'W', 'W', 'B', 'B'],
+          [ 'B', 'B', 'W', 'W', 'W', 'B', 'B', 'W'],
+          [ 'B', 'B', 'W', 'B', 'B', 'B', 'W', 'W'],
+          [ 'B', 'B', 'W', 'B', 'B', 'B', 'W', 'W']]
+othello(board2, 'W', 1, 2) => False
